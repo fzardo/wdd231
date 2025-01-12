@@ -1,0 +1,110 @@
+:root {
+    --primary-color: #004a99;
+    --secondary-color: #000000;
+    --tertiary-color: #FFFFFF;
+    --quaternary-color: #333333;
+    --font-family: "Spline Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+
+/* Header Content */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    padding: 1em;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+/* Navigation Content */
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+}
+
+#menu::before {
+    content: "≡";
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+nav {
+    background-color: var(--secondary-color);
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem;
+    text-align: left;
+    text-decoration: none;
+    color: var(--tertiary-color);
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+
+.navigation a:hover,
+.navigation a:active {
+    color: var(--quaternary-color);
+    background-color: var(--secondary-color);
+}
+
+.show li {
+    display: block;
+}
+
+/* Main Content */
+main {
+    padding: 1em;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Footer Content */
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    margin-top: 2em;
+}

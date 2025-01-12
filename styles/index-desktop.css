@@ -1,0 +1,36 @@
+@media only screen and (min-width: 640px) {
+
+    /* Header adjustments */
+    header h1 {
+        font-size: 2em;
+    }
+
+    /* Navigation Content */
+
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+    /* Main Content */
+    main {
+        max-width: 1200px;
+    }
+
+    /* Footer Content */
+    footer p {
+        margin: 0.5em 0;
+    }
+}

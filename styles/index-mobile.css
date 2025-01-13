@@ -14,22 +14,28 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
     line-height: 1.6;
-    color: var(--secondary-color);
-    background-color: var(--primary-color);
+    min-height: 100%;
 }
 
 /* Header Content */
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--secondary-color);
+    display: grid;
+    background-color: var(--primary-color);
     color: var(--tertiary-color);
-    padding: 1em;
+}
+
+.me {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+}
+
+header img {
+    width: 100px;
+    height: auto;
 }
 
 header h1 {
@@ -60,7 +66,7 @@ header h1 {
 .navigation {
     list-style: none;
     margin: 0 auto;
-    max-width: 760px;
+    color: var(--secondary-color);
 }
 
 nav {
@@ -73,8 +79,8 @@ nav {
 
 .navigation a {
     display: block;
-    padding: 0.75rem;
-    text-align: left;
+    /* padding: 0.75rem; */
+    text-align: center;
     text-decoration: none;
     color: var(--tertiary-color);
     font-weight: 700;
@@ -85,7 +91,6 @@ nav {
 .navigation a:hover,
 .navigation a:active {
     color: var(--quaternary-color);
-    background-color: var(--secondary-color);
 }
 
 .show li {
@@ -93,11 +98,77 @@ nav {
 }
 
 /* Main Content */
-main {
-    padding: 1em;
-    max-width: 90%;
-    margin: 0 auto;
+
+section {
+    margin: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: var(--tertiary-color);
+}
+
+section h2 {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    padding: 10px;
     text-align: center;
+}
+
+section p {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+figure {
+    margin-top: 20px;
+    text-align: center;
+}
+
+figure img {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.coursesNav {
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0.5rem;
+    background-color: var(--secondary-color);
+    max-width: 300px;
+}
+
+.coursesNav li {
+    display: block;
+    flex: 1 1 100%;
+}
+
+.coursesNav a {
+    text-align: center;
+    text-decoration: none;
+    color: var(--tertiary-color);
+    transition: 0.5s;
+}
+
+.coursesNav a:hover,
+.coursesNav a:active {
+    color: var(--quaternary-color);
+    background-color: var(--secondary-color);
+}
+
+.courses-container {
+    padding: 10px;
+    text-align: center;
+    gap: 10px;
+}
+
+.complete-course-card {
+    background-color: greenyellow;
+}
+
+.incomplete-course-card {
+    background-color: red;
 }
 
 /* Footer Content */
@@ -106,5 +177,4 @@ footer {
     padding: 1em;
     background-color: var(--secondary-color);
     color: var(--tertiary-color);
-    margin-top: 2em;
 }

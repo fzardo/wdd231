@@ -25,8 +25,28 @@
     }
 
     /* Main Content */
+
     main {
-        max-width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1em;
+        gap: 5px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    section {
+        box-shadow: 0 2px 5px var(--quaternary-color);
+        border: 1px solid var(--secondary-color);
+        border-radius: 0.5rem;
+    }
+
+    section:nth-child(3) {
+        grid-column: 1 / -1;
+    }
+
+    section p {
+        text-align: left;
     }
 
     /* Footer Content */

@@ -105,7 +105,12 @@ document.addEventListener("DOMContentLoaded", () => {
         courses.forEach((course) => {
             // Create a course-card div
             const courseCard = document.createElement("div");
-            courseCard.classList.add("course-card");
+
+            if (course.completed == true) {
+                courseCard.classList.add("complete-course-card");
+            } else {
+                courseCard.classList.add("incomplete-course-card");
+            }
 
             // Create and set up the content for the course name
             const courseNameElement = document.createElement("h3");

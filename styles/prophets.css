@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+}
+
+h1,
+h2 {
+    color: rgb(0, 0, 116);
+}
+
+main {
+    padding: 10px;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    text-align: center;
+    gap: 20px;
+}
+
+section {
+    background-color: rgb(216, 215, 215);
+}
+
+img {
+    box-shadow: 0 2px 5px black;
+}

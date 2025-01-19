@@ -90,6 +90,10 @@ header .theme-toggle {
     text-align: center;
 }
 
+.hero img {
+    max-width: 100%;
+}
+
 .hero button {
     background-color: var(--background-color);
     border: none;
@@ -130,6 +134,11 @@ h2 {
 
 #members section {
     padding: 10px;
+}
+
+#members img {
+    max-width: 50px;
+    max-height: auto;
 }
 
 h3 {

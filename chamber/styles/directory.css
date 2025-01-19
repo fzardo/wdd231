@@ -137,8 +137,8 @@ h2 {
 }
 
 #members img {
-    max-width: 50px;
-    max-height: auto;
+    max-width: 100px;
+    height: auto;
 }
 
 h3 {

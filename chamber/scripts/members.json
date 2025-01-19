@@ -1,60 +1,60 @@
 {
     "members": [
         {
-            "businessName": "Sports ltda",
-            "address": "",
-            "phone": "",
-            "url": "",
-            "image": "",
-            "membershipLevel": ""
+            "businessName": "Business Name",
+            "address": "info@gmail.com",
+            "phone": "888-888-888",
+            "url": "google.com",
+            "image": "https://github.com/fzardo/wdd231/blob/main/chamber/images/cc.png",
+            "membershipLevel": "1"
         },
         {
-            "businessName": "Sports ltda",
-            "address": "",
-            "phone": "",
-            "url": "",
-            "image": "",
-            "membershipLevel": ""
+            "businessName": "Business Name",
+            "address": "info@gmail.com",
+            "phone": "888-888-888",
+            "url": "google.com",
+            "image": "https://github.com/fzardo/wdd231/blob/main/chamber/images/cc.png",
+            "membershipLevel": "1"
         },
         {
-            "businessName": "Sports ltda",
-            "address": "",
-            "phone": "",
-            "url": "",
-            "image": "",
-            "membershipLevel": ""
+            "businessName": "Business Name",
+            "address": "info@gmail.com",
+            "phone": "888-888-888",
+            "url": "google.com",
+            "image": "https://github.com/fzardo/wdd231/blob/main/chamber/images/cc.png",
+            "membershipLevel": "1"
         },
         {
-            "businessName": "Sports ltda",
-            "address": "",
-            "phone": "",
-            "url": "",
-            "image": "",
-            "membershipLevel": ""
+            "businessName": "Business Name",
+            "address": "info@gmail.com",
+            "phone": "888-888-888",
+            "url": "google.com",
+            "image": "https://github.com/fzardo/wdd231/blob/main/chamber/images/cc.png",
+            "membershipLevel": "1"
         },
         {
-            "businessName": "Sports ltda",
-            "address": "",
-            "phone": "",
-            "url": "",
-            "image": "",
-            "membershipLevel": ""
+            "businessName": "Business Name",
+            "address": "info@gmail.com",
+            "phone": "888-888-888",
+            "url": "google.com",
+            "image": "https://github.com/fzardo/wdd231/blob/main/chamber/images/cc.png",
+            "membershipLevel": "1"
         },
         {
-            "businessName": "Sports ltda",
-            "address": "",
-            "phone": "",
-            "url": "",
-            "image": "",
-            "membershipLevel": ""
+            "businessName": "Business Name",
+            "address": "info@gmail.com",
+            "phone": "888-888-888",
+            "url": "google.com",
+            "image": "https://github.com/fzardo/wdd231/blob/main/chamber/images/cc.png",
+            "membershipLevel": "1"
         },
         {
-            "businessName": "Sports ltda",
-            "address": "",
-            "phone": "",
-            "url": "",
-            "image": "",
-            "membershipLevel": ""
+            "businessName": "Business Name",
+            "address": "info@gmail.com",
+            "phone": "888-888-888",
+            "url": "google.com",
+            "image": "https://github.com/fzardo/wdd231/blob/main/chamber/images/cc.png",
+            "membershipLevel": "1"
         }
     ]
 }

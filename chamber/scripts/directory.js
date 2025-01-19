@@ -45,7 +45,7 @@ document.getElementById("wind").textContent = `${windSpeed} km/h`;
 document.getElementById("windChill").textContent = windChill;
 
 // Get members asynchronously
-const url = 'https://github.com/fzardo/wdd231/blob/main/chamber/scripts/members.json';
+const url = 'https://fzardo.github.io/wdd231/chamber/scripts/members.json';
 
 const cards = document.querySelector('#members');
 

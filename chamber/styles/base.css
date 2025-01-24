@@ -106,17 +106,26 @@ main {
     padding: 20px;
 }
 
-h2 {
+.cta {
+    text-align: center;
     padding: 10px;
 }
 
-.section {
+.cta a {
+    text-decoration: none;
+    font-size: 40px;
+    color: var(--primary-color);
+    padding: 5px;
+    border: 1px solid var(--text-color);
+}
+
+section {
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
 }
 
-.section div {
+section div {
     flex: 1;
     margin: 0 10px;
     padding: 10px;

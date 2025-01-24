@@ -110,35 +110,18 @@ h2 {
     padding: 10px;
 }
 
-#members,
 .section {
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
 }
 
-#members div,
 .section div {
     flex: 1;
     margin: 0 10px;
     padding: 10px;
     background-color: var(--background-color);
     border: 1px solid var(--text-color);
-}
-
-#members {
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: start;
-}
-
-#members section {
-    padding: 10px;
-}
-
-#members img {
-    max-width: 100px;
-    height: auto;
 }
 
 h3 {

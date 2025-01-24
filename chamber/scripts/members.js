@@ -1,20 +1,3 @@
-// Dynamically set the current year in the footer
-const currentYear = new Date().getFullYear();
-document.getElementById('currentyear').textContent = currentYear;
-
-// Dynamically set the last modified date in the footer
-const lastModified = document.lastModified;
-document.getElementById('lastModified').textContent = `Last Modified: ${lastModified}`;
-
-//Hamburger menu
-const mainnav = document.querySelector('.navigation')
-const hambutton = document.querySelector('#menu');
-
-hambutton.addEventListener('click', () => {
-    mainnav.classList.toggle('show');
-    hambutton.classList.toggle('show');
-});
-
 // Get members asynchronously
 const url = 'https://fzardo.github.io/wdd231/chamber/scripts/members.json';
 
@@ -51,6 +34,14 @@ const displayMembers = (members) => {
         card.appendChild(businessName);
         card.appendChild(figCaption);
         card.appendChild(image);
+
+        if (member.membershipLevel == 1) {
+            card.setAttribute('id', 'level1');
+        } else if (member.membershipLevel == 2) {
+            card.setAttribute('id', 'level2');
+        } else {
+            card.setAttribute('id', 'level3');
+        }
 
         cards.appendChild(card);
     });

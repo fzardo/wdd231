@@ -84,22 +84,15 @@ header .theme-toggle {
     color: var(--text-color);
 }
 
-/* Main */
+/* Hero */
 
 .hero {
     text-align: center;
+    position: relative;
 }
 
 .hero img {
     max-width: 100%;
-}
-
-.hero button {
-    background-color: var(--background-color);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
 }
 
 main {
@@ -107,17 +100,23 @@ main {
 }
 
 .cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     padding: 10px;
 }
 
 .cta a {
+    position: relative;
     text-decoration: none;
     font-size: 40px;
-    color: var(--primary-color);
+    color: var(--background-color);
     padding: 5px;
-    border: 1px solid var(--text-color);
 }
+
+/* Main */
 
 section {
     display: flex;
@@ -125,7 +124,7 @@ section {
     margin-bottom: 20px;
 }
 
-section div {
+section>div {
     flex: 1;
     margin: 0 10px;
     padding: 10px;
@@ -137,6 +136,14 @@ h3 {
     padding: 10px;
     background-color: var(--secondary-color);
     color: var(--background-color);
+}
+
+/* Events */
+
+.events #eventcards {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
 }
 
 /* Footer */

@@ -6,7 +6,7 @@
             "phone": "888-888-888",
             "url": "google.com",
             "image": "https://fzardo.github.io/wdd231/chamber/images/cc.png",
-            "membershipLevel": "1"
+            "membershipLevel": 1
         },
         {
             "businessName": "Business Name",
@@ -14,7 +14,7 @@
             "phone": "888-888-888",
             "url": "google.com",
             "image": "https://fzardo.github.io/wdd231/chamber/images/cc.png",
-            "membershipLevel": "3"
+            "membershipLevel": 3
         },
         {
             "businessName": "Business Name",
@@ -22,7 +22,7 @@
             "phone": "888-888-888",
             "url": "google.com",
             "image": "https://fzardo.github.io/wdd231/chamber/images/cc.png",
-            "membershipLevel": "2"
+            "membershipLevel": 2
         },
         {
             "businessName": "Business Name",
@@ -30,7 +30,7 @@
             "phone": "888-888-888",
             "url": "google.com",
             "image": "https://fzardo.github.io/wdd231/chamber/images/cc.png",
-            "membershipLevel": "1"
+            "membershipLevel": 1
         },
         {
             "businessName": "Business Name",
@@ -38,7 +38,7 @@
             "phone": "888-888-888",
             "url": "google.com",
             "image": "https://fzardo.github.io/wdd231/chamber/images/cc.png",
-            "membershipLevel": "2"
+            "membershipLevel": 2
         },
         {
             "businessName": "Business Name",
@@ -46,7 +46,7 @@
             "phone": "888-888-888",
             "url": "google.com",
             "image": "https://fzardo.github.io/wdd231/chamber/images/cc.png",
-            "membershipLevel": "1"
+            "membershipLevel": 1
         },
         {
             "businessName": "Business Name",
@@ -54,7 +54,55 @@
             "phone": "888-888-888",
             "url": "google.com",
             "image": "https://fzardo.github.io/wdd231/chamber/images/cc.png",
-            "membershipLevel": "1"
+            "membershipLevel": 1
+        },
+        {
+            "businessName": "Business Name",
+            "address": "info@gmail.com",
+            "phone": "888-888-888",
+            "url": "google.com",
+            "image": "https://fzardo.github.io/wdd231/chamber/images/cc.png",
+            "membershipLevel": 2
+        },
+        {
+            "businessName": "Business Name",
+            "address": "info@gmail.com",
+            "phone": "888-888-888",
+            "url": "google.com",
+            "image": "https://fzardo.github.io/wdd231/chamber/images/cc.png",
+            "membershipLevel": 3
+        },
+        {
+            "businessName": "Business Name",
+            "address": "info@gmail.com",
+            "phone": "888-888-888",
+            "url": "google.com",
+            "image": "https://fzardo.github.io/wdd231/chamber/images/cc.png",
+            "membershipLevel": 3
+        },
+        {
+            "businessName": "Business Name",
+            "address": "info@gmail.com",
+            "phone": "888-888-888",
+            "url": "google.com",
+            "image": "https://fzardo.github.io/wdd231/chamber/images/cc.png",
+            "membershipLevel": 2
+        },
+        {
+            "businessName": "Business Name",
+            "address": "info@gmail.com",
+            "phone": "888-888-888",
+            "url": "google.com",
+            "image": "https://fzardo.github.io/wdd231/chamber/images/cc.png",
+            "membershipLevel": 1
+        },
+        {
+            "businessName": "Business Name",
+            "address": "info@gmail.com",
+            "phone": "888-888-888",
+            "url": "google.com",
+            "image": "https://fzardo.github.io/wdd231/chamber/images/cc.png",
+            "membershipLevel": 1
         }
     ]
 }

@@ -1,28 +1,22 @@
-#members {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+:root {
+    --level1-color: burlywood;
+    --level2-color: silver;
+    --level3-color: gold;
 }
 
 #members {
+    display: flex;
     gap: 10px;
-    padding: 20px;
-    padding-bottom: 0px;
+    padding: 20px 20px 0px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 #members section {
     display: grid;
-    margin: 0 10px;
     border: 1px solid var(--text-color);
     padding: 10px;
     text-align: center;
-}
-
-#members section div {
-    display: flex;
-    text-align: left;
 }
 
 #members img {
@@ -31,13 +25,13 @@
 }
 
 #level1 {
-    background-color: burlywood;
+    background-color: var(--level1-color);
 }
 
 #level2 {
-    background-color: silver;
+    background-color: var(--level2-color);
 }
 
 #level3 {
-    background-color: gold;
+    background-color: var(--level3-color);
 }

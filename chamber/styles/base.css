@@ -16,29 +16,37 @@
 
 body {
     font-family: var(--font-family);
-    margin: 0;
-    padding: 0;
+    line-height: 1.5;
+    color: var(--text-color);
 }
 
-/* Header */
+/* Header and Footer */
 
-header {
+header,
+footer {
     display: flex;
-    background-color: var(--primary-color);
-    color: var(--background-color);
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 10px 20px;
+    color: var(--background-color);
+}
+
+header {
+    background-color: var(--primary-color);
+}
+
+footer {
+    background-color: var(--text-color);
 }
 
 header img {
-    max-width: 50px;
+    max-width: 100px;
+    height: auto;
 }
 
-header .theme-toggle {
-    border: none;
-    background: none;
-    cursor: pointer;
+footer img {
+    max-width: 48px;
+    height: auto;
 }
 
 .title {
@@ -148,28 +156,6 @@ h3 {
 
 #weatherinfo {
     padding: 10px;
-}
-
-/* Footer */
-
-footer {
-    display: flex;
-    background-color: var(--text-color);
-    color: var(--background-color);
-    text-align: center;
-    padding: 10px 20px;
-    gap: 10px;
-}
-
-footer a {
-    color: var(--background-color);
-    margin: 0 5px;
-    text-decoration: none;
-}
-
-footer img {
-    max-width: 48px;
-    height: auto;
 }
 
 /* Mobile */

@@ -25,7 +25,7 @@ const displayMembers = (members) => {
         figCaption.innerHTML = `
             Email: ${member.address}<br>
             Phone: ${member.phone}<br>
-            URL: ${member.url}
+            URL: <a href="${member.url}" target="_blank">${member.url}</a>
         `;
         image.setAttribute('loading', 'lazy');
         image.setAttribute('width', '340');

@@ -5,15 +5,15 @@ const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday
 const indicesToKeep = [0, 8, 16, 24];
 
 // select HTML elements in the document
-const cards = document.querySelector('#weatherinfo');
+const apiCards = document.querySelector('#weatherinfo');
 // const tomorrowweatherIcon = document.querySelector('#tomorrow-icon');
 
-const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=-20.32&lon=-40.34&cnt=25&lang=en&appid=cd93db16281b033b3d0fe7c41bffd03e&units=metric';
+const apiUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=-20.32&lon=-40.34&cnt=25&lang=en&appid=cd93db16281b033b3d0fe7c41bffd03e&units=metric';
 
 // Wrapper for the API fetch with the counter check
 async function apiFetch() {
     try {
-        const response = await fetch(url);
+        const response = await fetch(apiUrl);
         if (response.ok) {
             const data = await response.json();
             console.log(data);
@@ -51,8 +51,8 @@ function displayResults(data) {
         weatherCard.appendChild(weather);
         weatherCard.appendChild(weatherIcon);
 
-        // Append the weather card to the cards container
-        cards.appendChild(weatherCard);
+        // Append the weather card to the apiCards container
+        apiCards.appendChild(weatherCard);
     });
 }
 

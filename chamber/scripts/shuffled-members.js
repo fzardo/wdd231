@@ -13,11 +13,10 @@ async function getMemberData() {
 const selectRandomMembers = (members) => {
     // Filter for gold (level 3) and silver (level 2) members
     const filteredMembers = members.filter(member => member.membershipLevel === 2 || member.membershipLevel === 3);
-    
+
     // Randomize the order of the filtered members
     const shuffledMembers = filteredMembers.sort(() => 0.5 - Math.random());
-    console.log(shuffledMembers);
-    
+
     // Return a random subset of 2–3 members
     return shuffledMembers.slice(0, Math.floor(Math.random() * 2) + 2);
 };

@@ -13,6 +13,7 @@
 
     <script src="scripts/base.js" defer></script>
     <script src="scripts/join.js" defer></script>
+    <script src="scripts/membership.js" defer></script>
 
     <link rel="icon" href="favicon.ico">
 
@@ -93,9 +94,9 @@
                     </select>
                 </label>
 
-                <label for="description">Organization Description:
-                    <textarea id="description" name="description"
-                        title="Brief description of your organization"></textarea>
+                <label class="desc" for="description">Organization Description:
+                    <textarea id="description" name="description" title="Brief description of your organization"
+                        rows="4"></textarea>
                 </label>
             </fieldset>
 
@@ -103,89 +104,17 @@
             <button type="submit">Join us</button>
         </form>
 
-        <div class="membership-cards">
-            <!-- NP Membership Card -->
-            <article class="membership-card">
-                <h3>NP Membership</h3>
-                <p>Non-Profit Organizations</p>
-                <p>No Fee</p>
-                <a href="#np-modal" class="info-link">View Benefits</a>
-            </article>
+        <h1>Membership Levels</h1>
+        <div class="membership-cards"></div>
 
-            <!-- Bronze Membership Card -->
-            <article class="membership-card" id="level1">
-                <h3>Bronze Membership</h3>
-                <p>$500/year</p>
-                <a href="#bronze-modal" class="info-link">View Benefits</a>
-            </article>
-
-            <!-- Silver Membership Card -->
-            <article class="membership-card" id="level2">
-                <h3>Silver Membership</h3>
-                <p>$1,000/year</p>
-                <a href="#silver-modal" class="info-link">View Benefits</a>
-            </article>
-
-            <!-- Gold Membership Card -->
-            <article class="membership-card" id="level3">
-                <h3>Gold Membership</h3>
-                <p>$2,500/year</p>
-                <a href="#gold-modal" class="info-link">View Benefits</a>
-            </article>
-        </div>
-
-        <!-- Membership Modals -->
-        <div id="np-modal" class="modal">
-            <div class="modal-content">
-                <h4>NP Membership Benefits</h4>
-                <ul>
-                    <li>Free basic directory listing</li>
-                    <li>Access to member newsletter</li>
-                    <li>2 free event tickets/month</li>
-                </ul>
+        <!-- Single dialog for all membership benefits -->
+        <dialog id="membershipDialog">
+            <div>
+                <h2></h2>
                 <button class="close-modal">&times;</button>
             </div>
-        </div>
-
-        <div id="bronze-modal" class="modal">
-            <div class="modal-content">
-                <h4>Bronze Membership Benefits</h4>
-                <ul>
-                    <li>All NP benefits plus:</li>
-                    <li>Business training workshops</li>
-                    <li>5% event discounts</li>
-                    <li>Social media mentions</li>
-                </ul>
-                <button class="close-modal">&times;</button>
-            </div>
-        </div>
-
-        <div id="silver-modal" class="modal">
-            <div class="modal-content">
-                <h4>Silver Membership Benefits</h4>
-                <ul>
-                    <li>All Bronze benefits plus:</li>
-                    <li>Premium directory listing</li>
-                    <li>10% event discounts</li>
-                    <li>Monthly networking events</li>
-                </ul>
-                <button class="close-modal">&times;</button>
-            </div>
-        </div>
-
-        <div id="gold-modal" class="modal">
-            <div class="modal-content">
-                <h4>Gold Membership Benefits</h4>
-                <ul>
-                    <li>All Silver benefits plus:</li>
-                    <li>Home page spotlight position</li>
-                    <li>20% event discounts</li>
-                    <li>VIP event access</li>
-                    <li>Annual leadership conference</li>
-                </ul>
-                <button class="close-modal">&times;</button>
-            </div>
-        </div>
+            <ul></ul>
+        </dialog>
     </main>
 
     <footer>

@@ -209,6 +209,11 @@ form label {
     padding-top: .2rem;
 }
 
+.desc {
+    display: grid;
+    max-width: 100%;
+}
+
 form h3 {
     font-size: .9rem;
     color: #E07A5F;
@@ -265,6 +270,10 @@ form button[type=submit] {
 }
 
 /* Membership Card Styles */
+.form-container {
+    grid-template-columns: 2fr 1fr;
+}
+
 .membership-cards {
     display: grid;
     gap: 1.5rem;
@@ -280,6 +289,8 @@ form button[type=submit] {
     transform: translateY(20px);
     animation: cardEntrance 0.6s ease-out forwards;
     animation-delay: 100ms;
+    position: sticky;
+    top: 1rem;
 }
 
 .membership-card #level1 {
@@ -399,11 +410,6 @@ form button[type=submit] {
     }
 
     .form-container {
-        grid-template-columns: 2fr 1fr;
-    }
-
-    .membership-cards {
-        position: sticky;
-        top: 1rem;
+        display: block;
     }
 }

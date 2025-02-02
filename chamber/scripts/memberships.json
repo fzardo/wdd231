@@ -1,0 +1,45 @@
+{
+    "Memberships": [
+        {
+            "level": "NP Membership",
+            "description": "Non-Profit Organizations",
+            "fee": "No Fee",
+            "benefits": [
+                "Free basic directory listing",
+                "Access to member newsletter",
+                "2 free event tickets/month"
+            ]
+        },
+        {
+            "level": "Bronze Membership",
+            "fee": "$500/year",
+            "benefits": [
+                "All NP benefits plus:",
+                "Business training workshops",
+                "5% event discounts",
+                "Social media mentions"
+            ]
+        },
+        {
+            "level": "Silver Membership",
+            "fee": "$1,000/year",
+            "benefits": [
+                "All Bronze benefits plus:",
+                "Premium directory listing",
+                "10% event discounts",
+                "Monthly networking events"
+            ]
+        },
+        {
+            "level": "Gold Membership",
+            "fee": "$2,500/year",
+            "benefits": [
+                "All Silver benefits plus:",
+                "Home page spotlight position",
+                "20% event discounts",
+                "VIP event access",
+                "Annual leadership conference"
+            ]
+        }
+    ]
+}

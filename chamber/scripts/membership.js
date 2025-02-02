@@ -1,13 +1,22 @@
-const url = "https://fzardo.github.io/wdd231/chamber/scripts/members.json";
+const url = "https://fzardo.github.io/wdd231/chamber/scripts/memberships.json";
 const showHere = document.querySelector(".membership-cards");
-const modal = document.querySelector(".modal");
-const modalContent = document.querySelector(".modal-content");
-const closeModalButtons = document.querySelectorAll(".close-modal");
+const dialog = document.getElementById("membershipDialog");
+const dialogTitle = dialog.querySelector("h2");
+const dialogBenefitsList = dialog.querySelector("ul");
+const closeButtons = document.querySelectorAll(".close-modal");
 
-closeModalButtons.forEach(button => {
+// Close modal when clicking close button
+closeButtons.forEach(button => {
     button.addEventListener("click", () => {
-        modal.style.display = "none";
+        dialog.close();
     });
+});
+
+// Close modal when clicking outside of dialog
+dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+        dialog.close();
+    }
 });
 
 async function getMembershipData() {
@@ -24,6 +33,15 @@ function displayMemberships(data) {
     data.Memberships.forEach(membership => {
         const card = document.createElement("article");
         card.classList.add("membership-card");
+
+        // Assign membership level IDs if needed
+        if (membership.level.includes("Bronze")) {
+            card.id = "level1";
+        } else if (membership.level.includes("Silver")) {
+            card.id = "level2";
+        } else if (membership.level.includes("Gold")) {
+            card.id = "level3";
+        }
 
         const title = document.createElement("h3");
         title.textContent = membership.level;
@@ -45,8 +63,9 @@ function displayMemberships(data) {
 }
 
 function showBenefits(membership) {
-    modalContent.innerHTML = `<h4>${membership.level} Benefits</h4><ul>${membership.benefits.map(benefit => `<li>${benefit}</li>`).join('')}</ul>`;
-    modal.style.display = "block";
+    dialogTitle.textContent = `${membership.level} Benefits`;
+    dialogBenefitsList.innerHTML = membership.benefits.map(benefit => `<li>${benefit}</li>`).join('');
+    dialog.showModal();
 }
 
 getMembershipData();

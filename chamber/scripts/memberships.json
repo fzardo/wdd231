@@ -12,7 +12,7 @@
         },
         {
             "level": "Bronze Membership",
-            "fee": "$500/year",
+            "fee": "R$500/year",
             "benefits": [
                 "All NP benefits plus:",
                 "Business training workshops",
@@ -22,7 +22,7 @@
         },
         {
             "level": "Silver Membership",
-            "fee": "$1,000/year",
+            "fee": "R$1,000/year",
             "benefits": [
                 "All Bronze benefits plus:",
                 "Premium directory listing",
@@ -32,7 +32,7 @@
         },
         {
             "level": "Gold Membership",
-            "fee": "$2,500/year",
+            "fee": "R$2,500/year",
             "benefits": [
                 "All Silver benefits plus:",
                 "Home page spotlight position",

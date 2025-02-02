@@ -312,7 +312,53 @@ form button[type=submit] {
     }
 }
 
-#membership-card {}
+/* Style the dialog element */
+#membershipDialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 300px;
+    max-width: 80%;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the dialog's internal content */
+#membershipDialog div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#membershipDialog h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#membershipDialog ul {
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+/* Style the close button */
+#membershipDialog .close-modal {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0;
+}
+
+/* Style the backdrop */
+#membershipDialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+}
 
 /* Modal Styles */
 .modal {
@@ -327,7 +373,7 @@ form button[type=submit] {
 }
 
 .modal-content {
-    background: white;
+    background: var(--background-color);
     padding: 2rem;
     margin: 2rem auto;
     width: 90%;
@@ -349,7 +395,7 @@ form button[type=submit] {
 }
 
 .user-info {
-    background: #f8f9fa;
+    background: var(--background-color);
     padding: 2rem;
     border-radius: 8px;
 }

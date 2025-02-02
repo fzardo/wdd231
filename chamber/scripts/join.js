@@ -9,16 +9,3 @@ document.querySelectorAll('.info-link').forEach(link => {
         modal.style.display = 'block';
     });
 });
-
-document.querySelectorAll('.close-modal').forEach(btn => {
-    btn.addEventListener('click', () => {
-        btn.closest('.modal').style.display = 'none';
-    });
-});
-
-// Close modal on outside click
-window.onclick = e => {
-    if (e.target.classList.contains('modal')) {
-        e.target.style.display = 'none';
-    }
-}

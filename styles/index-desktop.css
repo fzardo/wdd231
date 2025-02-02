@@ -1,4 +1,4 @@
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 400px) {
 
     /* Header adjustments */
     header h1 {
@@ -47,6 +47,36 @@
 
     section p {
         text-align: left;
+    }
+
+    .complete-course-card h3:hover {
+        animation: .5s linear infinite alternate pulsingOut;
+    }
+
+    .incomplete-course-card h3:hover {
+        animation: .5s linear infinite alternate pulsingIn;
+    }
+
+    /* Animations */
+
+    @keyframes pulsingOut {
+        from {
+            transform: scale(1);
+        }
+
+        to {
+            transform: scale(1.1);
+        }
+    }
+
+    @keyframes pulsingIn {
+        from {
+            transform: scale(1);
+        }
+
+        to {
+            transform: scale(0.9);
+        }
     }
 
     /* Footer Content */

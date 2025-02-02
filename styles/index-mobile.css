@@ -63,14 +63,31 @@ header h1 {
     content: "X";
 }
 
+nav {
+    background-color: var(--secondary-color);
+}
+
+nav a {
+    flex: 1 1 100%;
+    display: block;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, .1);
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+}
+
+a:hover,
+a:focus {
+    background-color: #fff;
+    color: #000;
+}
+
 .navigation {
     list-style: none;
     margin: 0 auto;
     color: var(--secondary-color);
-}
-
-nav {
-    background-color: var(--secondary-color);
 }
 
 .navigation li {

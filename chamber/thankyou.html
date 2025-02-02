@@ -9,11 +9,10 @@
     <meta name="author" content="Felipe Zardo Cabral">
 
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/members.css">
+    <link rel="stylesheet" href="styles/join.css">
 
     <script src="scripts/base.js" defer></script>
-    <script src="scripts/weather-api.js" defer></script>
-    <script src="scripts/members.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
 
     <link rel="icon" href="favicon.ico">
 
@@ -36,7 +35,7 @@
             <a id="menu" href="#"></a>
             <nav>
                 <ul class="navigation">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="directory.html">Directory</a></li>
                     <li><a href="join.html">Join</a></li>
                     <li><a href="#">Discover</a></li>
@@ -45,37 +44,9 @@
         </div>
     </header>
 
-    <main>
-        <div class="hero">
-            <img src="images/vitoria.webp" alt="Vitória, Espirito Santo - BR">
-            <div class="cta">
-                <a href="join.html">Join Us</a>
-            </div>
-        </div>
-        <section>
-            <div class="events">
-                <h3>Events</h3>
-                <div id="eventcards">
-                    <p>Placeholder</p>
-                    <p>Placeholder</p>
-                    <p>Placeholder</p>
-                    <p>Placeholder</p>
-                    <p>Placeholder</p>
-                    <p>Placeholder</p>
-                    <p>Placeholder</p>
-                    <p>Placeholder</p>
-                    <p>Placeholder</p>
-                    <p>Placeholder</p>
-                </div>
-            </div>
-
-            <div class="weather">
-                <h3>Weather</h3>
-                <div id="weatherinfo">
-                </div>
-            </div>
-        </section>
-        <div id="members"></div>
+    <main class="confirmation">
+        <h1>Thank You for Joining!</h1>
+        <div id="results"></div>
     </main>
 
     <footer>

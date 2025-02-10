@@ -392,7 +392,7 @@ form button[type=submit] {
 
 .discover-grid {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "card1 card2 card3"
         "card4 card5 card6"
         "card7 card8 .";
@@ -400,11 +400,23 @@ form button[type=submit] {
     padding: 2rem;
 }
 
-.discover-card:nth-child(1) { grid-area: card1; }
-.discover-card:nth-child(2) { grid-area: card2; }
-.discover-card:nth-child(3) { grid-area: card3; }
-.discover-card:nth-child(4) { grid-area: card4; }
-.discover-card:nth-child(5) { grid-area: card5; }
-.discover-card:nth-child(6) { grid-area: card6; }
-.discover-card:nth-child(7) { grid-area: card7; }
-.discover-card:nth-child(8) { grid-area: card8; }
+.details {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}

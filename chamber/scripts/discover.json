@@ -1,16 +1,52 @@
 {
     "discovers": [
-      {
-        "name": "Convento da Penha",
-        "image": "convento.webp",
-        "address": "E. São Francisco - Vila Rubim, Vitória - ES",
-        "description": "Historic 16th-century convent offering panoramic city views from its hilltop location."
-      },
-      {
-        "name": "Camburi Beach",
-        "image": "beach.webp",
-        "address": "Av. Dante Michelini, Vitória - ES",
-        "description": "Popular urban beach with a 6km shoreline perfect for sports and sunset walks."
-      }
+        {
+            "name": "Pedra da Cebola Park",
+            "image": "https://fzardo.github.io/wdd231/chamber/images/onion.webp",
+            "address": "R. Ana Viêira Mafra, s/n - Mata da Praia, Vitória - ES, 29066-010",
+            "description": "Pedra da Cebola Park is located between 'Jardim da Penha' and 'Mata da Praia'. The park measures 100,005 square meters and has typical restinga vegetation."
+        },
+        {
+            "name": "Camburi Beach",
+            "image": "https://fzardo.github.io/wdd231/chamber/images/camburi.webp",
+            "address": "Av. Dante Michelini, Vitória - ES",
+            "description": "It's the longest beach in Vitória, with total length of 6km."
+        },
+        {
+            "name": "Vale Botanical Park",
+            "image": "https://fzardo.github.io/wdd231/chamber/images/vale.webp",
+            "address": "Av. dos Expedicionários, s/n - Jardim Camburi, Vitória - ES, 29090-070",
+            "description": "The Vale Botanical Park is located in the Tubarão Port Industrial Complex. The Park is located within Vale's Green Belt and reveals the process of forest restoration and preservation of the Atlantic Forest."
+        },
+        {
+            "name": "Boi Island",
+            "image": "https://fzardo.github.io/wdd231/chamber/images/boi.webp",
+            "address": "Ilha do Boi, Vitória - ES",
+            "description": "Boi Island is an island-neighborhood, the island got its name because it was the residence of oxen that arrived on the island of Vitória in the colonial period."
+        },
+        {
+            "name": "Anchieta Palace",
+            "image": "https://fzardo.github.io/wdd231/chamber/images/anchieta.webp",
+            "address": "Praça João Clímaco, s/n - Centro, Vitória - ES, 29015-110",
+            "description": "Anchieta Palace is the seat of the executive power of the state of Espírito Santo, Brazil. The palace is located directly in front of Vitória Port."
+        },
+        {
+            "name": "The Convent of Nossa Senhora do Monte do Carmo",
+            "image": "https://fzardo.github.io/wdd231/chamber/images/convent.webp",
+            "address": "Praça Irmã Joséfa Hosana, 5 - Centro, Vitória - ES, 29015-560",
+            "description": "The Convent of Nossa Senhora do Monte do Carmo is a Catholic temple founded in 1682 in the city of Vitória, capital of Espírito Santo."
+        },
+        {
+            "name": "Namorados Square",
+            "image": "https://fzardo.github.io/wdd231/chamber/images/namorados.webp",
+            "address": "Praia do Canto, Vitória - ES, 29055-500",
+            "description": "The square is well know for being one of the main regular stops for dates of many couples and hangout with friends."
+        },
+        {
+            "name": "Bermuda Triangle - Vitória",
+            "image": "https://fzardo.github.io/wdd231/chamber/images/triangulo.webp",
+            "address": "R. João da Cruz - Praia do Canto, Vitória - ES, 29055-460",
+            "description": "The Bermuda Triangle comprises the stretch between 'Joaquim Lírio' and 'João da Cruz' streets. It received this name because people frequently got lost with friends in the local bars and restaurants, often returning to their homes only at dawn."
+        }
     ]
-  }
+}

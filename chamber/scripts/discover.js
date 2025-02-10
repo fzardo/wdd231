@@ -42,6 +42,8 @@ function displayDiscoverCards(data) {
     data.discovers.forEach(discover => {
         let card = document.createElement("article");
         card.classList.add("discover-card");
+        let info = document.createElement('div');
+        let learnMoreBtn = document.createElement('button');
 
         let discoverName = document.createElement('h2');
         let figCaption = document.createElement("figcaption");
@@ -49,21 +51,45 @@ function displayDiscoverCards(data) {
 
         discoverName.textContent = discover.name;
 
-        image.setAttribute('src', discover.image);
-        image.setAttribute('alt', `${discover.name}`);
+        // image.setAttribute('src', discover.image);
+        // image.setAttribute('alt', `${discover.name}`);
+        // figCaption.innerHTML = `
+        //         Address: ${discover.address}<br>
+        //         Description: ${discover.description}<br>
+        //     `;
+        // image.setAttribute('loading', 'lazy');
+        // image.setAttribute('width', '300');
+        // image.setAttribute('height', '200');
+
+        image.src = discover.image;
+        image.alt = discover.name;
+        image.loading = 'lazy';
+        image.width = 300;
+        image.height = 200;
+
+        // Create hidden details section
+        figCaption.classList.add('details');
         figCaption.innerHTML = `
-                Address: ${discover.address}<br>
-                Description: ${discover.description}<br>
-            `;
-        image.setAttribute('loading', 'lazy');
-        image.setAttribute('width', '300');
-        image.setAttribute('height', '200');
+            <p>Address: ${discover.address}</p>
+            <p>Description: ${discover.description}</p>
+        `;
+        figCaption.style.display = 'none'; // Initially hidden
 
-        card.appendChild(discoverName);
-        info.appendChild(figCaption);
-        info.appendChild(image);
-        card.appendChild(info);
+        // card.appendChild(discoverName);
+        // info.appendChild(figCaption);
+        // info.appendChild(image);
+        // card.appendChild(info);
 
+        // Create Learn More button
+        learnMoreBtn.textContent = "Learn More";
+        learnMoreBtn.addEventListener("click", () => {
+            // Toggle details visibility
+            figCaption.style.display = figCaption.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // // Assemble elements
+        info.append(image, learnMoreBtn, figCaption);
+        card.append(discoverName, info);
         discoverGrid.appendChild(card);
     });
 }

@@ -21,8 +21,8 @@ dialog.addEventListener("click", (event) => {
 
 async function getMembershipData() {
     try {
-        const response = await fetch(url);
-        const data = await response.json();
+        let response = await fetch(url);
+        let data = await response.json();
         displayMemberships(data);
     } catch (error) {
         console.error("Error loading memberships:", error);
@@ -43,13 +43,13 @@ function displayMemberships(data) {
             card.id = "level3";
         }
 
-        const title = document.createElement("h3");
+        let title = document.createElement("h3");
         title.textContent = membership.level;
 
-        const fee = document.createElement("p");
+        let fee = document.createElement("p");
         fee.textContent = membership.fee;
 
-        const link = document.createElement("a");
+        let link = document.createElement("a");
         link.href = "#";
         link.classList.add("info-link");
         link.textContent = "View Benefits";

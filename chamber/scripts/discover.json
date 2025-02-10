@@ -1,0 +1,16 @@
+{
+    "attractions": [
+      {
+        "name": "Convento da Penha",
+        "image": "convento.webp",
+        "address": "E. São Francisco - Vila Rubim, Vitória - ES",
+        "description": "Historic 16th-century convent offering panoramic city views from its hilltop location."
+      },
+      {
+        "name": "Camburi Beach",
+        "image": "beach.webp",
+        "address": "Av. Dante Michelini, Vitória - ES",
+        "description": "Popular urban beach with a 6km shoreline perfect for sports and sunset walks."
+      }
+    ]
+  }

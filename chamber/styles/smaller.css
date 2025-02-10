@@ -1,0 +1,85 @@
+@media (max-width: 640px) {
+    .section {
+        flex-direction: column;
+    }
+
+    .section div {
+        margin: 10px 0;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    #menu::before {
+        content: "≡";
+    }
+
+    #menu.show::before {
+        content: "X";
+    }
+
+    .navigation {
+        display: block;
+    }
+
+    .navigation li {
+        display: none;
+    }
+
+    .navigation a {
+        display: block;
+        text-align: center;
+        background-color: var(--secondary-color);
+        padding: 5px;
+    }
+
+    .show li {
+        display: block;
+    }
+
+    .form-container {
+        display: block;
+    }
+
+    .discover-main {
+        padding: 2rem;
+    }
+
+    .discover-grid {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8";
+    }
+
+    .discover-card {
+        background: white;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .discover-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 4px;
+        transition: transform 0.3s ease;
+    }
+
+    #visit-message {
+        background: #f8f9fa;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        border-radius: 4px;
+        text-align: center;
+    }
+}

@@ -51,16 +51,6 @@ function displayDiscoverCards(data) {
 
         discoverName.textContent = discover.name;
 
-        // image.setAttribute('src', discover.image);
-        // image.setAttribute('alt', `${discover.name}`);
-        // figCaption.innerHTML = `
-        //         Address: ${discover.address}<br>
-        //         Description: ${discover.description}<br>
-        //     `;
-        // image.setAttribute('loading', 'lazy');
-        // image.setAttribute('width', '300');
-        // image.setAttribute('height', '200');
-
         image.src = discover.image;
         image.alt = discover.name;
         image.loading = 'lazy';
@@ -73,12 +63,7 @@ function displayDiscoverCards(data) {
             <p>Address: ${discover.address}</p>
             <p>Description: ${discover.description}</p>
         `;
-        figCaption.style.display = 'none'; // Initially hidden
-
-        // card.appendChild(discoverName);
-        // info.appendChild(figCaption);
-        // info.appendChild(image);
-        // card.appendChild(info);
+        figCaption.style.display = 'none';
 
         // Create Learn More button
         learnMoreBtn.textContent = "Learn More";

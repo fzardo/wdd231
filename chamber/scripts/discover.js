@@ -59,41 +59,11 @@ function displayDiscoverCards(data) {
         image.setAttribute('width', '300');
         image.setAttribute('height', '200');
 
-        let link = document.createElement("a");
-        link.href = "#";
-        link.classList.add("info-link");
-        link.textContent = "View Benefits";
-        link.addEventListener("click", () => showBenefits(membership));
-
         card.appendChild(discoverName);
         info.appendChild(figCaption);
         info.appendChild(image);
         card.appendChild(info);
 
         discoverGrid.appendChild(card);
-    });
-}
-
-function displayDiscoverCards(data) {
-    data.discovers.forEach(discover => {
-        let card = document.createElement("article");
-        card.classList.add("discover-card");
-
-        let title = document.createElement("h2");
-        title.textContent = discover.level;
-
-        let fee = document.createElement("p");
-        fee.textContent = membership.fee;
-
-        let link = document.createElement("a");
-        link.href = "#";
-        link.classList.add("info-link");
-        link.textContent = "View Benefits";
-        link.addEventListener("click", () => showBenefits(membership));
-
-        card.appendChild(title);
-        card.appendChild(fee);
-        card.appendChild(link);
-        showHere.appendChild(card);
     });
 }

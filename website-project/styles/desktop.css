@@ -18,6 +18,8 @@ footer {
     align-items: center;
     padding: 10px 20px;
     background-color: var(--text-color);
+    color: var(--primary-color);
+    text-align: center;
 }
 
 header {
@@ -45,6 +47,7 @@ footer {
 .navigation li a {
     text-decoration: none;
     text-align: center;
+    color: var(--background-color);
     font-weight: 700;
 }
 
@@ -110,7 +113,7 @@ h2 {
 .song-card iframe {
     width: 100%;
     min-width: auto;
-    min-height: 169px; /* 16:9 aspect ratio */
+    min-height: 169px;
     border: none;
     display: block;
     margin: 0 auto;
@@ -132,11 +135,80 @@ h2 {
     margin: 0;
 }
 
+.artist-stash {
+    margin: 20px;
+}
+
+.artist-stash::before,
+.artist-stash::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+.artist-nav {
+    margin-bottom: 20px;
+}
+
+#artists {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    justify-items: center;
+}
+
+.artist-card {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+}
+
+.artist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.artist-card h3 {
+    color: var(--secondary-color);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+}
+
+.artist-card p {
+    color: var(--text-color);
+    margin: 0 0 0.8rem 0;
+}
+
+.artist-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.artist-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.artist-links a:hover {
+    color: var(--secondary-color);
+}
+
 .nav-container, .sub-nav-container {
     display: flex;
     gap: 0.75rem;
     padding: 1rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav-container button, .sub-nav-container button {

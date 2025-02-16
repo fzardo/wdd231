@@ -50,6 +50,16 @@
         grid-template-columns: 1fr;
         gap: 1rem;
     }
+    
+    #artists {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .artist-card {
+        padding: 1rem;
+        max-width: 280px;
+    }
 
     /* Full-width navigation items */
     .nav-container, .sub-nav-container {

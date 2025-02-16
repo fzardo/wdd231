@@ -1,0 +1,16 @@
+{
+    "songs": [
+        {
+            "originalName": "Keitaro Ujiie",
+            "artisticName": "Snail's House",
+            "details": "Born on February 23, 1997, he became interested in composing during junior high school. He started creating original music using Nintendo DS softwares. Later he started using FL Studio. His goals was to 'create all kinds of music'. Around 2014 he became a reference in 'Kawaii Future Bass' subgenre.",
+            "urls": ["https://ujicosnail.com/", "https://www.youtube.com/user/loudnessfete"]
+        },
+        {
+            "originalName": "Ben Mangum",
+            "artisticName": "Mystery Ben",
+            "details": "Born on July 15, 1983, he released his first original animation 'Mystery Skulls - Ghost' on Oct 27, 2014. Since then, he released new original animations around every two years.",
+            "urls": ["https://www.youtube.com/@MysteryBen27", "https://mysterybensmysteryblog.tumblr.com/"]
+        }
+    ]
+}

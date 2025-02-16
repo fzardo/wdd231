@@ -17,7 +17,6 @@ footer {
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    color: var(--background-color);
     background-color: var(--text-color);
 }
 
@@ -46,7 +45,6 @@ footer {
 .navigation li a {
     text-decoration: none;
     text-align: center;
-    color: var(--background-color);
     font-weight: 700;
 }
 

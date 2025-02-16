@@ -42,8 +42,6 @@ function displaySongs(songs) {
 
         const iframe = document.createElement('iframe');
         iframe.src = song.url.replace('.com/watch?v=', '-nocookie.com/embed/');
-        // iframe.width = '280';
-        // iframe.height = '160';
         iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
         iframe.allowFullscreen = true;
 

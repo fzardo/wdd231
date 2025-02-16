@@ -1,10 +1,16 @@
 @media screen and (max-width: 320px) {
     #menu {
-        display: block;
+        display: block; /* Show hamburger menu */
+        position: relative;
+        padding: 15px;
+        font-size: 1.5em;
+        text-decoration: none;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
     }
 
     #menu::before {
-        content: "≡";
+        content: "=";
     }
 
     #menu.show::before {
@@ -12,17 +18,60 @@
     }
 
     .navigation {
-        display: block;
+        display: none;
+        flex-direction: column;
+        padding: 1rem;
+        position: absolute;
+        background-color: var(--text-color);
+        left: 0px;
+        min-width: 88%;
     }
 
-    .navigation li {
-        display: none;
+    .navigation.show {
+        display: block;
     }
 
     .navigation a {
         display: block;
-        text-align: center;
+        padding: 1rem;
         background-color: var(--secondary-color);
-        padding: 5px;
+        color: var(--text-color);
+        border-bottom: 1px solid var(--text-color);
+    }
+
+    .navigation a:hover,
+    .navigation a:active {
+        transition: 0.5s;
+        color: var(--primary-color);
+    }
+    
+    /* Stack song cards */
+    #songs {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Full-width navigation items */
+    .nav-container, .sub-nav-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .nav-container a, .sub-nav-container a {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    /* Adjust song card padding */
+    .song-card {
+        padding: 1rem;
+        max-width: 280px;
+        height: auto;
+    }
+
+    iframe {
+        width: 280px;
+        height: auto;
     }
 }

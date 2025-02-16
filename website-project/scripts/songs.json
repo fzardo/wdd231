@@ -1,0 +1,64 @@
+{
+    "songs": [
+        {
+            "songName": "Lost",
+            "author": "Linkin Park",
+            "genre": ["Rock", "Metal"],
+            "url": "https://www.youtube.com/watch?v=7NK_JOkuSVY"
+        },
+        {
+            "songName": "Fighting Myself",
+            "author": "Linkin Park",
+            "genre": ["Rock", "Metal"],
+            "url": "https://www.youtube.com/watch?v=iKBCVZqqooY"
+        },
+        {
+            "songName": "More the Victim",
+            "author": "Linkin Park",
+            "genre": ["Rock", "Metal"],
+            "url": "https://www.youtube.com/watch?v=Ysb4Md4XYsc"
+        },
+        {
+            "songName": "Easier to Run",
+            "author": "Linkin Park",
+            "genre": ["Rock", "Metal"],
+            "url": "https://www.youtube.com/watch?v=Br91hWUrmII"
+        },
+        {
+            "songName": "Castle of Glass",
+            "author": "Linkin Park",
+            "genre": ["Rock", "Metal"],
+            "url": "https://www.youtube.com/watch?v=ScNNfyq3d_w"
+        },
+        {
+            "songName": "Pixel Galaxy",
+            "author": "Snail's House",
+            "genre": ["Future Bass", "Electro-Pop"],
+            "url": "https://www.youtube.com/watch?v=3nlSDxvt6JU"
+        },
+        {
+            "songName": "Snailchan Adventure",
+            "author": "Snail's House",
+            "genre": ["Future Bass", "Electro-Pop"],
+            "url": "https://www.youtube.com/watch?v=US3VTVDRbjE"
+        },
+        {
+            "songName": "Twinklestar",
+            "author": "Snail's House",
+            "genre": ["Future Bass", "Electro-Pop"],
+            "url": "https://www.youtube.com/watch?v=myiJB8SiIcU"
+        },
+        {
+            "songName": "Restart",
+            "author": "Snail's House",
+            "genre": ["Future Bass", "Electro-Pop"],
+            "url": "https://www.youtube.com/watch?v=On_ZA4RNfyU"
+        },
+        {
+            "songName": "Sound Traveller",
+            "author": "Snail's House",
+            "genre": ["Future Bass", "Electro-Pop"],
+            "url": "https://www.youtube.com/watch?v=dxzrRB25qls"
+        }
+    ]
+}

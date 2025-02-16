@@ -1,0 +1,28 @@
+@media screen and (max-width: 320px) {
+    #menu {
+        display: block;
+    }
+
+    #menu::before {
+        content: "≡";
+    }
+
+    #menu.show::before {
+        content: "X";
+    }
+
+    .navigation {
+        display: block;
+    }
+
+    .navigation li {
+        display: none;
+    }
+
+    .navigation a {
+        display: block;
+        text-align: center;
+        background-color: var(--secondary-color);
+        padding: 5px;
+    }
+}

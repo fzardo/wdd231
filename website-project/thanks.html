@@ -4,19 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Song Stash</title>
-    <meta name="description" content="This is index page for 'WDD 131 - Dynamic Web Fundamentals' class.">
+    <title>Thank You - Song Stash</title>
+    <meta name="description" content="Thank you for submitting to Song Stash">
     <meta name="author" content="Felipe Zardo Cabral">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/desktop.css">
     <link rel="stylesheet" href="styles/mobile.css">
-    
     <script src="scripts/base.js" defer></script>
-    <script src="scripts/songs.js" defer></script>
-    <script src="scripts/artists.js" defer></script>
+    <script src="scripts/form-handler.js" defer></script>
 </head>
 
-<body id="index">
+<body>
     <header>
         <div class="title">
             <div>
@@ -36,14 +34,10 @@
         </div>
     </header>
     <main>
-        <section class="featured-songs">
-            <h2>Featured Songs</h2>
-            <div id="songs" class="grid-container"></div>
-        </section>
-
-        <section class="featured-artists">
-            <h2>Featured Artists</h2>
-            <div id="artists" class="grid-container"></div>
+        <section class="thank-you">
+            <h2>Thank You for Your Submission!</h2>
+            <div id="submission-details"></div>
+            <a href="browse.html" class="primary-button">Browse More Songs</a>
         </section>
     </main>
     <footer>
@@ -53,5 +47,4 @@
         </div>
     </footer>
 </body>
-
 </html>

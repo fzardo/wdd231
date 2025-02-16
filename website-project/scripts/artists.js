@@ -1,14 +1,7 @@
 const artistsUrl = 'https://fzardo.github.io/wdd231/website-project/scripts/artists.json';
 const artistCards = document.querySelector('#artists');
-const navContainer = document.querySelector(".nav-container");
-const subNavContainer = document.querySelector(".sub-nav-container");
-
-// Call getArtistData() based on page
-if (document.body.id === 'index') {
-    getArtistData(true);  // Randomly display 1-2 artists for index.html
-} else {
-    getArtistData(false);  // Display all artists for browse.html
-}
+const artistNavContainer = document.querySelector(".nav-container");
+const artistSubNavContainer = document.querySelector(".sub-nav-container");
 
 async function getArtistData(randomize) {
     const response = await fetch(artistsUrl);
@@ -57,31 +50,31 @@ function displayArtists(artists) {
 }
 
 function createNavigation(artists) {
-    navContainer.innerHTML = "";
-    subNavContainer.innerHTML = "";
+    artistNavContainer.innerHTML = "";
+    artistSubNavContainer.innerHTML = "";
     
     const allButton = document.createElement("button");
     allButton.textContent = "All";
     allButton.addEventListener("click", () => displayArtists(artists));
-    navContainer.appendChild(allButton);
+    artistNavContainer.appendChild(allButton);
 
     const artisticNameButton = document.createElement("button");
     artisticNameButton.textContent = "Artistic Name";
     artisticNameButton.addEventListener("click", () => 
         createSubNavigation("Artistic Name", artists)
     );
-    navContainer.appendChild(artisticNameButton);
+    artistNavContainer.appendChild(artisticNameButton);
 }
 
 function createSubNavigation(category, artists) {
-    subNavContainer.innerHTML = "";
+    artistSubNavContainer.innerHTML = "";
     const uniqueNames = [...new Set(artists.map(artist => artist.artisticName))];
     
     uniqueNames.forEach(name => {
         const button = document.createElement("button");
         button.textContent = name;
         button.addEventListener("click", () => filterArtists(category, name, artists));
-        subNavContainer.appendChild(button);
+        artistSubNavContainer.appendChild(button);
     });
 }
 
@@ -90,4 +83,11 @@ function filterArtists(category, value, artists) {
         category === "Artistic Name" ? artist.artisticName === value : true
     );
     displayArtists(filtered);
+}
+
+// Call getArtistData() based on page
+if (document.body.id === 'index') {
+    getArtistData(true);  // Randomly display 1-2 artists for index.html
+} else {
+    getArtistData(false);  // Display all artists for browse.html
 }

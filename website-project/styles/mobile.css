@@ -1,7 +1,6 @@
 @media screen and (max-width: 320px) {
     #menu {
-        display: block; /* Show hamburger menu */
-        position: relative;
+        display: block;
         padding: 15px;
         font-size: 1.5em;
         text-decoration: none;
@@ -21,9 +20,7 @@
         display: none;
         flex-direction: column;
         padding: 1rem;
-        position: absolute;
         background-color: var(--text-color);
-        left: 0px;
         min-width: 88%;
     }
 
@@ -31,12 +28,12 @@
         display: block;
     }
 
-    .navigation a {
+    .navigation li a {
         display: block;
         padding: 1rem;
         background-color: var(--secondary-color);
-        color: var(--text-color);
         border-bottom: 1px solid var(--text-color);
+        color: var(--text-color);
     }
 
     .navigation a:hover,
@@ -44,13 +41,8 @@
         transition: 0.5s;
         color: var(--primary-color);
     }
-    
-    /* Stack song cards */
-    #songs {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
+
+    #songs,
     #artists {
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -61,19 +53,19 @@
         max-width: 280px;
     }
 
-    /* Full-width navigation items */
-    .nav-container, .sub-nav-container {
+    .nav-container,
+    .sub-nav-container {
         flex-direction: column;
         gap: 0.5rem;
     }
 
-    .nav-container a, .sub-nav-container a {
+    .nav-container a,
+    .sub-nav-container a {
         width: 100%;
         text-align: center;
         padding: 1rem;
     }
 
-    /* Adjust song card padding */
     .song-card {
         padding: 1rem;
         max-width: 280px;
@@ -83,5 +75,30 @@
     iframe {
         width: 280px;
         height: auto;
+    }
+
+    .featured-songs,
+    .featured-artists {
+        margin: 15px;
+    }
+
+    .featured-songs h2,
+    .featured-artists h2 {
+        font-size: 1.5rem;
+    }
+
+    .song-form {
+        padding: 1rem;
+    }
+    
+    .song-form input,
+    .song-form select,
+    .song-form textarea {
+        padding: 0.6rem;
+    }
+    
+    .primary-button {
+        width: 100%;
+        padding: 1rem;
     }
 }

@@ -4,19 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Song Stash</title>
-    <meta name="description" content="This is index page for 'WDD 131 - Dynamic Web Fundamentals' class.">
+    <title>Song Submission - Song Stash</title>
+    <meta name="description" content="Submit your music recommendations to Song Stash">
     <meta name="author" content="Felipe Zardo Cabral">
+
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/desktop.css">
     <link rel="stylesheet" href="styles/mobile.css">
-    
+
     <script src="scripts/base.js" defer></script>
-    <script src="scripts/songs.js" defer></script>
-    <script src="scripts/artists.js" defer></script>
 </head>
 
-<body id="index">
+<body>
     <header>
         <div class="title">
             <div>
@@ -36,14 +35,27 @@
         </div>
     </header>
     <main>
-        <section class="featured-songs">
-            <h2>Featured Songs</h2>
-            <div id="songs" class="grid-container"></div>
-        </section>
+        <section class="song-form">
+            <h2>Submit a Song</h2>
+            <form method="GET" action="thanks.html" class="designOne">
+                <label>Your Name <input type="text" name="name" required autocomplete="given-name"></label>
 
-        <section class="featured-artists">
-            <h2>Featured Artists</h2>
-            <div id="artists" class="grid-container"></div>
+                <label>Email <input type="email" name="email" required placeholder="example@domain.com"></label>
+
+                <label>Song Title <input type="text" name="song" required></label>
+
+                <label>Artist Name <input type="text" name="artist" required></label>
+
+                <label>Genre <input type="text" name="genre" required></label>
+
+                <label>YouTube URL <input type="url" name="url" required placeholder="https://youtube.com/..."></label>
+
+                <label>Additional Comments
+                    <textarea name="comments" rows="4"></textarea>
+                </label>
+
+                <input type="submit" value="Submit Song" class="primary-button">
+            </form>
         </section>
     </main>
     <footer>

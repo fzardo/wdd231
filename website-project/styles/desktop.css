@@ -46,7 +46,6 @@ footer {
 
 .navigation li a {
     text-decoration: none;
-    text-align: center;
     color: var(--background-color);
     font-weight: 700;
 }
@@ -62,36 +61,24 @@ h2 {
     color: var(--primary-color);
 }
 
-.song-stash {
+.song-stash,
+.artist-stash {
     margin: 20px;
 }
 
 /* Added Decorative Elements */
-.song-stash::before {
+.song-stash::before,
+.song-stash::after,
+.artist-stash::before,
+.artist-stash::after {
     content: "";
     display: block;
     height: 4px;
     background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    /* margin-bottom: 2rem; */
 }
 
-.song-stash::after {
-    content: "";
-    display: block;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    /* margin-bottom: 2rem; */
-}
-
-.song-nav {
-    margin-bottom: 20px;
-}
-
-.song-nav nav {
-    margin-bottom: 10px;
-}
-
-#songs {
+#songs,
+#artists {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 1.5rem;
@@ -99,11 +86,12 @@ h2 {
     justify-items: center;
 }
 
-.song-card {
+.song-card,
+.artist-card {
     background: white;
     padding: 1.25rem;
     border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 90%;
     position: relative;
@@ -119,71 +107,27 @@ h2 {
     margin: 0 auto;
 }
 
-.song-card:hover {
+.song-card:hover,
+.artist-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-.song-card h3 {
+.song-card h3,
+.artist-card h3 {
     color: var(--secondary-color);
     margin: 0;
     font-size: 1.25rem;
 }
 
-.song-card p {
+.song-card p,
+.artist-card p {
     color: var(--text-color);
     margin: 0;
-}
-
-.artist-stash {
-    margin: 20px;
-}
-
-.artist-stash::before,
-.artist-stash::after {
-    content: "";
-    display: block;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
 }
 
 .artist-nav {
     margin-bottom: 20px;
-}
-
-#artists {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 1.5rem;
-    padding: 1rem;
-    justify-items: center;
-}
-
-.artist-card {
-    background: white;
-    padding: 1.25rem;
-    border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 90%;
-    position: relative;
-    overflow: hidden;
-}
-
-.artist-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-}
-
-.artist-card h3 {
-    color: var(--secondary-color);
-    margin: 0 0 0.5rem 0;
-    font-size: 1.25rem;
-}
-
-.artist-card p {
-    color: var(--text-color);
-    margin: 0 0 0.8rem 0;
 }
 
 .artist-links {
@@ -204,7 +148,21 @@ h2 {
     color: var(--background-color);
 }
 
-.nav-container, .sub-nav-container {
+.featured-songs,
+.featured-artists {
+    margin: 20px;
+}
+
+.featured-songs h2,
+.featured-artists h2 {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.nav-container,
+.sub-nav-container {
     display: flex;
     gap: 0.75rem;
     padding: 1rem;
@@ -212,7 +170,8 @@ h2 {
     justify-content: center;
 }
 
-.nav-container button, .sub-nav-container button {
+.nav-container button,
+.sub-nav-container button {
     padding: 0.75rem 2rem;
     min-width: 120px;
     background: var(--secondary-color);
@@ -231,7 +190,7 @@ h2 {
     box-sizing: border-box;
 }
 
-.nav-container a:hover, 
+.nav-container a:hover,
 .nav-container a.active,
 .sub-nav-container a:hover {
     background: var(--primary-color);
@@ -259,4 +218,81 @@ h2 {
 .text {
     color: var(--text-color);
     font-weight: bold;
+}
+
+/* Form Styling */
+.song-form {
+    margin: 2rem auto;
+    max-width: 600px;
+    padding: 1rem;
+}
+
+.song-form label {
+    display: block;
+    margin: 1rem 0;
+    color: var(--text-color);
+}
+
+.song-form input,
+.song-form select,
+.song-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.primary-button {
+    background: var(--secondary-color);
+    color: var(--text-color);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.thank-you {
+    text-align: center;
+    padding: 2rem;
+}
+
+#submission-details {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem auto;
+    max-width: 600px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+input:valid,
+select:valid,
+textarea:valid {
+    border-color: var(--primary-color);
+}
+
+input:invalid,
+select:invalid {
+    border-color: #ff4444;
+}
+
+/* Show green border when filled */
+input:not(:placeholder-shown):valid,
+select:valid,
+textarea:not(:placeholder-shown) {
+    border-color: green;
+}
+
+/* Style for disabled select option */
+option[disabled] {
+    color: gray;
 }

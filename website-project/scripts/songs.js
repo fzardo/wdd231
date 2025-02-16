@@ -3,13 +3,6 @@ const cards = document.querySelector('#songs');
 const navContainer = document.querySelector(".nav-container");
 const subNavContainer = document.querySelector(".sub-nav-container");
 
-// Call getSongData() with specific argument based on the page
-if (document.body.id === 'index') {
-    getSongData(true);  // Randomly display 2-3 songs for index.html
-} else {
-    getSongData(false);  // Display all songs for browse.html
-}
-
 // Fetch the songs data
 async function getSongData(randomize) {
     console.log(randomize);
@@ -41,8 +34,9 @@ function displaySongs(songs) {
         author.textContent = `${song.author}`;
 
         const iframe = document.createElement('iframe');
-        iframe.src = song.url.replace('.com/watch?v=', '-nocookie.com/embed/');
+        iframe.src = song.url;
         iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.loading = "lazy";
         iframe.allowFullscreen = true;
 
         card.appendChild(iframe);
@@ -56,12 +50,12 @@ function displaySongs(songs) {
 function createNavigation(songs) {
     navContainer.innerHTML = "";
     subNavContainer.innerHTML = "";
-    
+
     const allButton = document.createElement("button");
     allButton.textContent = "All";
     allButton.addEventListener("click", () => displaySongs(songs));
     navContainer.appendChild(allButton);
-    
+
     ["Author", "Genre"].forEach(category => {
         const button = document.createElement("button");
         button.textContent = category;
@@ -74,7 +68,7 @@ function createNavigation(songs) {
 function createSubNavigation(category, songs) {
     subNavContainer.innerHTML = "";
     const uniqueValues = [...new Set(songs.flatMap(song => category === "Author" ? [song.author] : song.genre))];
-    
+
     uniqueValues.forEach(value => {
         const button = document.createElement("button");
         button.textContent = value;
@@ -87,4 +81,11 @@ function createSubNavigation(category, songs) {
 function filterSongs(category, value, songs) {
     const filteredSongs = songs.filter(song => category === "Author" ? song.author === value : song.genre.includes(value));
     displaySongs(filteredSongs);
+}
+
+// Call getSongData() with specific argument based on the page
+if (document.body.id === 'index') {
+    getSongData(true);  // Randomly display 2-3 songs for index.html
+} else {
+    getSongData(false);  // Display all songs for browse.html
 }

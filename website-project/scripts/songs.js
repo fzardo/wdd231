@@ -1,5 +1,7 @@
 const url = 'https://fzardo.github.io/wdd231/website-project/scripts/songs.json';
 const cards = document.querySelector('#songs');
+const navContainer = document.querySelector(".nav-container");
+const subNavContainer = document.querySelector(".sub-nav-container");
 
 // Call getSongData() with specific argument based on the page
 if (document.body.id === 'index') {
@@ -16,6 +18,7 @@ async function getSongData(randomize) {
     // If randomize is true, apply filtering and selection, otherwise show all songs
     const songsToDisplay = randomize ? selectRandomSong(data.songs) : data.songs;
     displaySongs(songsToDisplay);
+    createNavigation(data.songs);
 }
 
 // Select random songs from the list
@@ -35,18 +38,55 @@ function displaySongs(songs) {
         title.textContent = song.songName;
 
         const author = document.createElement('p');
-        author.textContent = `Artist: ${song.author}`;
+        author.textContent = `${song.author}`;
 
         const iframe = document.createElement('iframe');
-        iframe.src = song.url.replace('watch?v=', 'embed/');
-        iframe.width = '560';
-        iframe.height = '315';
+        iframe.src = song.url.replace('.com/watch?v=', '-nocookie.com/embed/');
+        // iframe.width = '280';
+        // iframe.height = '160';
         iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
         iframe.allowFullscreen = true;
 
+        card.appendChild(iframe);
         card.appendChild(title);
         card.appendChild(author);
-        card.appendChild(iframe);
         cards.appendChild(card);
     });
+}
+
+// Create navigation bar
+function createNavigation(songs) {
+    navContainer.innerHTML = "";
+    subNavContainer.innerHTML = "";
+    
+    const allButton = document.createElement("button");
+    allButton.textContent = "All";
+    allButton.addEventListener("click", () => displaySongs(songs));
+    navContainer.appendChild(allButton);
+    
+    ["Author", "Genre"].forEach(category => {
+        const button = document.createElement("button");
+        button.textContent = category;
+        button.addEventListener("click", () => createSubNavigation(category, songs));
+        navContainer.appendChild(button);
+    });
+}
+
+// Create sub-navigation for authors/genres
+function createSubNavigation(category, songs) {
+    subNavContainer.innerHTML = "";
+    const uniqueValues = [...new Set(songs.flatMap(song => category === "Author" ? [song.author] : song.genre))];
+    
+    uniqueValues.forEach(value => {
+        const button = document.createElement("button");
+        button.textContent = value;
+        button.addEventListener("click", () => filterSongs(category, value, songs));
+        subNavContainer.appendChild(button);
+    });
+}
+
+// Filter songs by selected author/genre
+function filterSongs(category, value, songs) {
+    const filteredSongs = songs.filter(song => category === "Author" ? song.author === value : song.genre.includes(value));
+    displaySongs(filteredSongs);
 }

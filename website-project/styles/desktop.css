@@ -66,12 +66,30 @@ footer {
 
 .navigation a:hover,
 .navigation a:active {
-    color: var(--text-color);
+    color: var(--primary-color);
 }
 
 h1,
 h2 {
     color: var(--primary-color);
+}
+
+.song-stash {
+    margin: 20px;
+}
+
+.nav {
+    margin-bottom: 20px;
+}
+
+#songs {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.song-card {
+    margin: 0px;
 }
 
 .primary {

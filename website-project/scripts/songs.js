@@ -1,5 +1,12 @@
-const url = 'https://fzardo.github.io/wdd231/chamber/scripts/songs.json';
+const url = 'https://fzardo.github.io/wdd231/website-project/scripts/songs.json';
 const cards = document.querySelector('#songs');
+
+// Call getSongData() with specific argument based on the page
+if (document.body.id === 'index') {
+    getSongData(true);  // Randomly display 2-3 songs for index.html
+} else {
+    getSongData(false);  // Display all songs for browse.html
+}
 
 // Fetch the songs data
 async function getSongData(randomize) {
@@ -11,55 +18,35 @@ async function getSongData(randomize) {
     displaySongs(songsToDisplay);
 }
 
-// Function to randomly select 2-3 songs with gold or silver songships
-const selectRandomSongs = (songs) => {
-    // Filter for gold (level 3) and silver (level 2) songs
-    const filteredSongs = songs.filter(member => member.songshipLevel === 2 || member.songshipLevel === 3);
+// Select random songs from the list
+function selectRandomSong(songs) {
+    const shuffled = songs.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, Math.floor(Math.random() * 2) + 2); // Select 2 or 3 random songs
+}
 
-    // Randomize the order of the filtered songs
-    const shuffledSongs = filteredSongs.sort(() => 0.5 - Math.random());
-
-    // Return a random subset of 2–3 songs
-    return shuffledSongs.slice(0, Math.floor(Math.random() * 2) + 2);
-};
-
-// Function to display the member data
-const displaySongs = (songs) => {
+// Display songs dynamically using iframe
+function displaySongs(songs) {
     cards.innerHTML = ''; // Clear existing content
+    songs.forEach(song => {
+        const card = document.createElement('div');
+        card.classList.add('song-card');
 
-    songs.forEach((member) => {
-        let card = document.createElement('section');
-        let info = document.createElement('div');
+        const title = document.createElement('h3');
+        title.textContent = song.songName;
 
-        let businessName = document.createElement('h3');
-        let figCaption = document.createElement("figcaption");
-        let image = document.createElement('img');
+        const author = document.createElement('p');
+        author.textContent = `Artist: ${song.author}`;
 
-        businessName.textContent = member.businessName;
+        const iframe = document.createElement('iframe');
+        iframe.src = song.url.replace('watch?v=', 'embed/');
+        iframe.width = '560';
+        iframe.height = '315';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
 
-        image.setAttribute('src', member.image);
-        image.setAttribute('alt', `${member.businessName}`);
-        figCaption.innerHTML = `
-            Email: ${member.address}<br>
-            Phone: ${member.phone}<br>
-            URL: <a href="${member.url}" target="_blank">${member.url}</a>
-        `;
-        image.setAttribute('loading', 'lazy');
-        image.setAttribute('width', '340');
-        image.setAttribute('height', '440');
-
-        card.appendChild(businessName);
-        info.appendChild(figCaption);
-        info.appendChild(image);
-        card.appendChild(info);
-
+        card.appendChild(title);
+        card.appendChild(author);
+        card.appendChild(iframe);
         cards.appendChild(card);
     });
-};
-
-// Call getMemberData() with specific argument based on the page
-if (document.body.id === 'index') {
-    getMemberData(true);  // Randomly display 2-3 songs for index.html
-} else {
-    getMemberData(false);  // Display all songs for directory.html
 }
